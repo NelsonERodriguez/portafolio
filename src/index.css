@@ -441,3 +441,69 @@ a { color: inherit; }
     max-width: 100%;
   }
 }
+
+.skill-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+
+@media (max-width: 991px){
+  .skill-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 520px){
+  .skill-grid{ grid-template-columns:repeat(1,minmax(0,1fr)); }
+}
+
+.skill-ring{
+  position:relative;
+  width:140px;
+  height:140px;
+  margin:0 auto;
+}
+
+.skill-ring-track{
+  fill:none;
+  stroke: rgba(255,255,255,0.10);
+}
+
+.skill-ring-progress{
+  fill:none;
+  stroke: rgba(60,160,255,0.95);
+  transition: stroke-dasharray 900ms ease;
+}
+
+.skill-ring-center{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  text-align:center;
+  pointer-events:none;
+}
+
+.skill-ring-name{
+  font-weight:700;
+  font-size:14px;
+  line-height:1.1;
+}
+
+.skill-ring-years{
+  margin-top:6px;
+  font-size:12px;
+  opacity:0.75;
+}
+
+.p-4 {
+  margin-top: 1.5rem!important
+}
+
+.social-chip svg {
+  display: block;
+}
+
+.social-chip:hover svg {
+  color: var(--accent);
+}

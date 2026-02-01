@@ -1,4 +1,5 @@
 import heroImg from '@/assets/images/hero.jpg'
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { useLang } from '@/shared/lang/langContext'
 
 export default function HomePage() {
@@ -9,42 +10,90 @@ export default function HomePage() {
     name: 'Nelson Rodriguez',
     role:
       lang === 'es'
-        ? 'Desarrollador Fullstack (Django / React)'
-        : 'Fullstack Developer (Django / React)',
+        ? 'Desarrollador Fullstack (Web / Apps)'
+        : 'Fullstack Developer (Web / Apps)',
     bio:
       lang === 'es'
-        ? 'Me enfoco en productos web: frontend moderno, backend sólido y despliegues en VPS. Trabajo por placer: me gusta construir software y mejorar sistemas reales.'
-        : 'I focus on web products: modern frontend, solid backend, and VPS deployments. I work because I genuinely enjoy building software and improving real systems.',
+        ? 'Me especializo en el desarrollo de productos web reales, no solo sitios informativos. Trabajo de forma integral en frontend moderno, backend sólido y despliegues en servidores VPS, cuidando tanto la experiencia del usuario como la estabilidad y mantenibilidad del sistema. Disfruto construir software que se usa en el día a día, como ERP, CRM, aplicaciones internas y sistemas a medida. Trabajo por placer: me gusta programar, entender cómo funcionan los sistemas y mejorar plataformas reales, ya sea optimizando rendimiento, corrigiendo flujos o agregando nuevas funcionalidades.'
+        : 'I specialize in building real web products, not just informational websites. I work end-to-end on modern frontend, solid backend systems, and VPS-based deployments, focusing on both user experience and long-term stability and maintainability. I enjoy building software used on a daily basis, such as ERP and CRM systems, internal applications, and custom platforms. I work by passion — I genuinely enjoy programming, understanding how systems work, and improving real-world platforms through optimization and continuous enhancement.',
     cta: lang === 'es' ? 'Hablemos' : 'Let’s Talk',
     socialLabel: lang === 'es' ? 'Encuéntrame en' : 'Find me on',
     servicesKicker: lang === 'es' ? 'Mis servicios' : 'My services',
-    servicesTitle: lang === 'es' ? 'Lo que hago' : 'What I Do',
+    servicesTitle: lang === 'es' ? 'Lo que puedo y me gusta hacer' : 'What I can do and what I enjoy doing.',
     cards: [
       {
         tag: 'FE',
         title: lang === 'es' ? 'Frontend' : 'Frontend',
         text:
           lang === 'es'
-            ? 'Me gusta el frontend: UI limpia, responsive, componentes reutilizables y rendimiento.'
-            : 'I enjoy frontend: clean UI, responsive layouts, reusable components and performance.',
+            ? 'Me gusta el frontend: interfaces limpias, responsive, componentes reutilizables y buen rendimiento.'
+            : 'I enjoy frontend development: clean interfaces, responsive layouts, reusable components, and performance.',
+      },
+      {
+        tag: 'BE',
+        title: lang === 'es' ? 'Backend' : 'Backend',
+        text:
+          lang === 'es'
+            ? 'Diseño backend sólido: APIs claras, lógica de negocio bien estructurada y sistemas mantenibles.'
+            : 'I build solid backends: clean APIs, well-structured business logic, and maintainable systems.',
       },
       {
         tag: 'ERP',
         title: lang === 'es' ? 'ERP / CRM' : 'ERP / CRM',
         text:
           lang === 'es'
-            ? 'He construido sistemas tipo ERP/CRM desde cero: inventario, ventas, RRHH, contabilidad, reportes.'
-            : 'I’ve built ERP/CRM systems from scratch: inventory, sales, HR, accounting and reporting.',
+            ? 'He construido sistemas tipo ERP y CRM desde cero: inventario, ventas, RRHH, contabilidad y reportes.'
+            : 'I’ve built ERP and CRM systems from scratch: inventory, sales, HR, accounting, and reporting.',
+      },
+      {
+        tag: 'PROD',
+        title: lang === 'es' ? 'Producto' : 'Product mindset',
+        text:
+          lang === 'es'
+            ? 'Pienso en producto: soluciones reales, usables y escalables que aportan valor al negocio.'
+            : 'I think in terms of product: real, usable, and scalable solutions that deliver business value.',
+      },
+      {
+        tag: 'OPS',
+        title: lang === 'es' ? 'Despliegue e infraestructura' : 'Deployment & infrastructure',
+        text:
+          lang === 'es'
+            ? 'Me encargo del despliegue: VPS, entornos Linux, builds, dominios y SSL.'
+            : 'I handle deployments: VPS, Linux environments, builds, domains, and SSL.',
+      },
+      {
+        tag: 'OPT',
+        title: lang === 'es' ? 'Optimización' : 'Optimization',
+        text:
+          lang === 'es'
+            ? 'Me gusta mejorar sistemas existentes: rendimiento, flujos, UX y estabilidad.'
+            : 'I enjoy improving existing systems: performance, workflows, UX, and stability.',
       },
       {
         tag: 'LEARN',
         title: lang === 'es' ? 'Aprendizaje continuo' : 'Continuous learning',
         text:
           lang === 'es'
-            ? 'Me mantengo aprendiendo: nuevos lenguajes, frameworks, mejores prácticas y automatización.'
-            : 'Always learning: new languages, frameworks, best practices and automation.',
+            ? 'Siempre estoy aprendiendo: nuevos lenguajes, frameworks, mejores prácticas y automatización.'
+            : 'Always learning: new languages, frameworks, best practices, and automation.',
       },
-    ],
+      {
+        tag: 'SOLO',
+        title: lang === 'es' ? 'Trabajo independiente' : 'Independent work',
+        text:
+          lang === 'es'
+            ? 'Puedo trabajar solo de punta a punta o integrarme fácilmente a equipos técnicos.'
+            : 'I can work end-to-end independently or integrate smoothly into technical teams.',
+      },
+      {
+        tag: 'SPORT',
+        title: lang === 'es' ? 'Pasatiempos' : 'hobby',
+        text:
+          lang === 'es'
+            ? 'Practico baloncesto por el esfuerzo, me gusta el ciclismo por el trabajo en equipo y disfruto conducir motocicleta por la aventura.'
+            : 'I practice basketball for the physical challenge, enjoy cycling for teamwork and endurance, and ride motorcycles for the sense of adventure.',
+      },
+    ]
   }
 
   return (
@@ -76,24 +125,29 @@ export default function HomePage() {
                 href="https://github.com/NelsonERodriguez"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="GitHub"
               >
-                GH
+                <FaGithub size={18} />
               </a>
+
               <a
                 className="social-chip"
                 href="https://www.instagram.com/esttuardo_10"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Instagram"
               >
-                IG
+                <FaInstagram size={18} />
               </a>
+
               <a
                 className="social-chip"
                 href="https://www.linkedin.com/in/nelson-matul-9bb92796/"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="LinkedIn"
               >
-                IN
+                <FaLinkedin size={18} />
               </a>
             </div>
           </div>
@@ -110,7 +164,6 @@ export default function HomePage() {
       </section>
 
       <section className="services">
-        <div className="services-kicker">{copy.servicesKicker}</div>
         <h2 className="services-title">{copy.servicesTitle}</h2>
 
         <div className="row g-4 mt-2">
@@ -127,6 +180,50 @@ export default function HomePage() {
       </section>
 
       <div id="contact" className="contact-spacer" />
+
+      <section className="container py-5">
+        <h2 className="h4 mb-3">Contacto</h2>
+
+        <form
+          onSubmit={async (e) => {
+            e.preventDefault()
+            const form = e.currentTarget
+            const data = Object.fromEntries(new FormData(form))
+
+            const res = await fetch('https://buildcoreia.com/correo_publico/', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data),
+            })
+
+            if (!res.ok) {
+              alert('No se pudo enviar. Intenta de nuevo.')
+              return
+            }
+
+            form.reset()
+            alert('Enviado. Gracias.')
+          }}
+        >
+          <div className="row g-3">
+            <div className="col-12">
+              <input name="name" className="form-control" placeholder="Nombre" required autoComplete='off' />
+            </div>
+            <div className="col-12 col-md-6">
+              <input name="phone" className="form-control" placeholder="Tel" type="text" required autoComplete='off' />
+            </div>
+            <div className="col-12 col-md-6">
+              <input name="email" className="form-control" placeholder="Email" type="email" required autoComplete='off' />
+            </div>
+            <div className="col-12">
+              <textarea name="message" className="form-control" placeholder="Mensaje" rows={5} required autoComplete='off' />
+            </div>
+            <div className="col-12">
+              <button className="btn btn-accent" type="submit">Enviar</button>
+            </div>
+          </div>
+        </form>
+      </section>
     </div>
   )
 }

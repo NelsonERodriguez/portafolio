@@ -13,8 +13,8 @@ export default function BlogListPage() {
       </p>
 
       <div className="row g-4 mt-2">
-        {[1, 2, 3].map((n) => (
-          <div className="col-12 col-lg-4" key={n}>
+        {[1].map((n) => (
+          <div className="col-12" key={n}>
             <div className="card-dark p-4 h-100">
               <div className="card-icon">POST</div>
               <h3 className="card-title">{lang === 'es' ? `Post ${n}` : `Post ${n}`}</h3>
@@ -23,9 +23,9 @@ export default function BlogListPage() {
                   ? 'Extracto corto del post. Luego lo conectamos a /api/blog.'
                   : 'Short excerpt. Later we connect it to /api/blog.'}
               </p>
-              <button className="btn btn-outline-accent mt-2" type="button">
+              {/* <button className="btn btn-outline-accent mt-2" type="button">
                 {lang === 'es' ? 'Leer' : 'Read'}
-              </button>
+              </button> */}
             </div>
           </div>
         ))}

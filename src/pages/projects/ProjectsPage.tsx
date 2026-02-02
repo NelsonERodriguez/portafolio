@@ -13,8 +13,8 @@ export default function ProjectsPage() {
       </p>
 
       <div className="row g-4 mt-2">
-        {[1, 2, 3, 4, 5, 6].map((n) => (
-          <div className="col-12 col-md-6 col-lg-4" key={n}>
+        {[1, 2, 3, 4].map((n) => (
+          <div className="col-12 col-md-6" key={n}>
             <div className="card-dark p-4 h-100">
               <div className="card-icon">PRJ</div>
               <h3 className="card-title">

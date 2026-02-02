@@ -125,7 +125,7 @@ export default function ResumePage() {
       roleEn: 'Developer',
       infoEs: 'Información de contacto',
       infoEn: 'Contact Info',
-      address: 'Torre 3, Oficina 801, Edificos Zona Pradera, Zona 10, Guatemala, Guatemala.',
+      address: 'Torre 3, Oficina 801, Edificios Zona Pradera, Zona 10, Guatemala, Guatemala.',
       phone: '+ 502 2213 6100',
       boss: 'Maynor Garcia',
       bulletsEs: [

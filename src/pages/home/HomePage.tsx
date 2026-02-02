@@ -17,9 +17,23 @@ export default function HomePage() {
         ? 'Me especializo en el desarrollo de productos web reales, no solo sitios informativos. Trabajo de forma integral en frontend moderno, backend sólido y despliegues en servidores VPS, cuidando tanto la experiencia del usuario como la estabilidad y mantenibilidad del sistema. Disfruto construir software que se usa en el día a día, como ERP, CRM, aplicaciones internas y sistemas a medida. Trabajo por placer: me gusta programar, entender cómo funcionan los sistemas y mejorar plataformas reales, ya sea optimizando rendimiento, corrigiendo flujos o agregando nuevas funcionalidades.'
         : 'I specialize in building real web products, not just informational websites. I work end-to-end on modern frontend, solid backend systems, and VPS-based deployments, focusing on both user experience and long-term stability and maintainability. I enjoy building software used on a daily basis, such as ERP and CRM systems, internal applications, and custom platforms. I work by passion — I genuinely enjoy programming, understanding how systems work, and improving real-world platforms through optimization and continuous enhancement.',
     cta: lang === 'es' ? 'Hablemos' : 'Let’s Talk',
+    meta1:
+      lang === 'es'
+        ? 'Primero los deberes, luego los placeres.'
+        : 'Discipline first, reward later.',
+
+    meta2:
+      lang === 'es'
+        ? 'Trabaja cuando otros descansan, para lograr lo que otros solo sueñan.'
+        : 'Work while others rest, to achieve what others only dream of.',
+
+    meta3:
+      lang === 'es'
+        ? 'Enfocado en construir mi propia empresa.'
+        : 'Focused on building my own company.',
     socialLabel: lang === 'es' ? 'Encuéntrame en' : 'Find me on',
     servicesKicker: lang === 'es' ? 'Mis servicios' : 'My services',
-    servicesTitle: lang === 'es' ? 'Lo que puedo y me gusta hacer' : 'What I can do and what I enjoy doing.',
+    servicesTitle: lang === 'es' ? 'Lo que puedo y disfruto hacer' : 'What I can do and what I enjoy doing.',
     cards: [
       {
         tag: 'FE',
@@ -109,6 +123,11 @@ export default function HomePage() {
           <div className="hero-subtitle">{copy.role}</div>
 
           <p className="hero-text">{copy.bio}</p>
+          <ul>
+            <li>{copy.meta1}</li>
+            <li>{copy.meta2}</li>
+            <li>{copy.meta3}</li>
+          </ul>
 
           <div className="hero-actions">
             <a className="btn btn-accent btn-lg" href="#contact">
